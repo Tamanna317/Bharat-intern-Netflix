@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Homepage</title>
+    <style>
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Georgia,serif;
+    background-image: url('net.jpeg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-lest:20px;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links li.dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    padding: 10px;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.nav-links .dropdown-content a {
+    display: block;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sign-in-button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Movies Section */
+.movies-section {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+}
+
+.movies-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie {
+    margin: 20px;
+    text-align: center;
+}
+
+.movie img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* shows Section */
+.shows-section {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+}
+
+.shows-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shows {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.show {
+    margin: 20px;
+    text-align: center;
+}
+
+.show img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.show h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+/* popular Section */
+.popular-section {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+}
+
+.popular-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.popular{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.popu {
+    margin: 20px;
+    text-align: center;
+}
+
+.popu img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.popu h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 36px;
+    }
+
+    .main-content p {
+        font-size: 20px;
+    }
+
+    .movies-section h2 {
+        font-size: 28px;
+    }
+
+    .movie img {
+        width: 150px;
+        height: 225px;
+    }
+
+    .movie h3 {
+        font-size: 18px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Netflix</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="#popular">New & Popular</a></li>
+                <li class="dropdown">
+                    <a href="#">My Favourite</a>
+                    <div class="dropdown-content">
+                        <a href="#">1.Little Things</a>
+                        <a href="#">2.Rain or Shine</a>
+                        <a href="#">3.Nevertheless</a>
+			<a href="#">4.Scoop</a>
+                        <a href="#">5.1899</a>
+                        <a href="#">6.X0, Kitty</a>
+ 
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <button class="sign-in-button">Sign In</button>
+    </header>
+
+    <div id="home" class="main-content">
+        <h1>Welcome to Netflix</h1>
+        <p>Enjoy unlimited streaming of movies and TV shows. Join now!</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </div>
+
+    <section id="movies" class="movies-section">
+        <h2>Popular Movies</h2>
+        <div class="movies">
+            <div class="movie">
+                <img src="movie1.jpeg" alt="Movie 1">
+                <h3>Shehzada</h3>
+            </div>
+            <div class="movie">
+                <img src="movie2.jpeg" alt="Movie 2">
+                <h3>Virupaksha</h3>
+            </div>
+            <div class="movie">
+                <img src="movie3.jpeg" alt="Movie 3">
+                <h3>Gumraah</h3>
+            </div>
+	    
+	   <div class="movie">
+                <img src="movie4.jpeg" alt="Movie 4">
+                <h3>Tu Jhooti Mai Makkar </h3>
+            </div>
+
+	    <div class="movie">
+                <img src="movie5.jpeg" alt="Movie 5">
+                <h3>Chor Nikal Ke Bhaga</h3>
+            </div>
+                   </div>
+    </section>
+
+     <section id="shows" class="shows-section">
+        <h2>Popular Shows</h2>
+        <div class="shows">
+            <div class="show">
+                <img src="show1.jpeg" alt="Movie 1">
+                <h3>feels like Ishq</h3>
+            </div>
+            <div class="show">
+                <img src="show2.jpeg" alt="Movie 2">
+                <h3>Elite</h3>
+            </div>
+            <div class="show">
+                <img src="show3.jpeg" alt="Movie 3">
+                <h3>The Midnight Club</h3>
+            </div>
+	    
+	   <div class="show">
+                <img src="show4.jpeg" alt="Movie 4">
+                <h3>misMatched</h3>
+            </div>
+
+	    <div class="show">
+                <img src="show5.jpeg" alt="Movie 5">
+                <h3>Descendants of the Sun</h3>
+            </div>
+                   </div>
+    </section>
+
+
+   <section id="popular" class="popular-section">
+        <h2>New & Popular</h2>
+        <div class="popular">
+            <div class="popu">
+                <img src="movie3.jpeg" alt="Movie 1">
+                <h3>Gumraah</h3>
+            </div>
+            <div class="popu">
+                <img src="show1.jpeg" alt="Movie 2">
+                <h3>feels like Ishq</h3>
+            </div>
+            <div class="popu">
+                <img src="show5.jpeg" alt="Movie 3">
+                <h3>Descendants of the Sun</h3>
+            </div>
+	    
+	   <div class="popu">
+                <img src="movie1.jpeg" alt="Movie 4">
+                <h3>Shehzada</h3>
+            </div>
+
+	    <div class="popu">
+                <img src="show3.jpeg" alt="Movie 5">
+                <h3>The Midnight Club</h3>
+            </div>
+                   </div>
+    </section>
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Netflix. All rights reserved.</p>
+    </footer>
+</body>
+</html>
